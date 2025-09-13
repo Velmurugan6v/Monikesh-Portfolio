@@ -93,12 +93,31 @@ body {
 
 body {
   margin: 0;
-  background: linear-gradient(180deg, #071024 0%, #071726 60%);
+  padding: 28px;
+  min-height: 100vh;
   color: #e6eef6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 28px;
-  min-height: 100vh;
+  background: linear-gradient(270deg, #071024, #1e3a8a, #6ee7b7, #facc15);
+  background-size: 800% 800%;
+  /* expand background for smooth transition */
+  animation: bgGradientAnimation 15s ease infinite;
+  /* smooth infinite animation */
+}
+
+/* Gradient animation keyframes */
+@keyframes bgGradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .container {
@@ -107,25 +126,43 @@ body {
 
 /* ---------- Hero Section ---------- */
 .hero {
-  background: rgba(255, 255, 255, 0.05);
-  /* transparent glass */
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  /* Safari */
-  border-radius: var(--radius);
-  padding: 20px;
-  box-shadow: 0 4px 18px rgba(2, 6, 23, 0.5);
-  margin-bottom: 18px;
-  text-align: left;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(21, 28, 44, 0.6) !important;
+  /* dark glass, force override */
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-radius: 12px !important;
+  padding: 16px !important;
+  box-shadow: 0 4px 18px rgba(2, 6, 23, 0.5) !important;
+  min-height: 120px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
   /* subtle frosted border */
 }
 
 .hero .name {
-  font-size: 2rem;
+  font-size: 3rem;
+  /* bigger size */
   font-weight: 700;
   margin-bottom: 6px;
-  color: #ffffff;
+  background: linear-gradient(90deg, #6ee7b7, #3b82f6, #facc15, #ec4899);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+/* Gradient animation keyframes */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .hero .role {

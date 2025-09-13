@@ -10,18 +10,86 @@
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-body, body * {
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Glass Navbar */
+.glass-navbar {
+  position: fixed;
+  /* fixed so it doesn't push content */
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 10px 20px;
+  opacity: 0;
+  /* hidden by default */
+  pointer-events: none;
+  /* can't click while hidden */
+  transition: all 0.4s ease;
+  /* smooth fade/slide */
+}
+
+.glass-navbar.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.glass-navbar .nav-link {
+  color: #fff;
+  font-weight: 500;
+  margin: 0 8px;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  /* default invisible underline */
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.glass-navbar .nav-link.active {
+  color: var(--accent);
+  /* green */
+  border-bottom: 2px solid var(--accent);
+}
+
+.glass-navbar .nav-link:hover {
+  color: var(--accent);
+}
+
+body,
+body * {
   color: #ffffff !important;
 }
 
 .hero .btn.ghost {
-  color: var(--accent) !important;
-  border: 1px solid var(--accent) !important;
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  transition: all 0.3s ease;
 }
 
+.hero .btn.ghost:hover {
+  background: var(--accent);
+  /* green background */
+  color: var(--bg);
+  /* text becomes dark background color */
+}
 
-* { box-sizing: border-box; }
-html, body { height: 100%; }
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
 
 body {
   margin: 0;
@@ -39,15 +107,18 @@ body {
 
 /* ---------- Hero Section ---------- */
 .hero {
-  background: rgba(255, 255, 255, 0.05); /* transparent glass */
+  background: rgba(255, 255, 255, 0.05);
+  /* transparent glass */
   backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px); /* Safari */
+  -webkit-backdrop-filter: blur(14px);
+  /* Safari */
   border-radius: var(--radius);
   padding: 20px;
   box-shadow: 0 4px 18px rgba(2, 6, 23, 0.5);
   margin-bottom: 18px;
   text-align: left;
-  border: 1px solid rgba(255, 255, 255, 0.1); /* subtle frosted border */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* subtle frosted border */
 }
 
 .hero .name {
@@ -70,8 +141,12 @@ body {
   margin-bottom: 16px;
 }
 
+
 /* ---------- CTA ---------- */
-.cta { gap: 10px; }
+.cta {
+  gap: 10px;
+}
+
 .btn {
   display: inline-block;
   padding: 8px 14px;
@@ -81,11 +156,13 @@ body {
   text-decoration: none;
   font-weight: 600;
 }
+
 .btn.ghost {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.06);
   color: var(--accent);
 }
+
 .social {
   color: var(--muted);
   text-decoration: none;
@@ -95,8 +172,9 @@ body {
 
 /* ---------- Card Styling ---------- */
 .card {
-  background: rgba(21, 28, 44, 0.6) !important;  /* dark glass, force override */
-  backdrop-filter: blur(16px) !important; 
+  background: rgba(21, 28, 44, 0.6) !important;
+  /* dark glass, force override */
+  backdrop-filter: blur(16px) !important;
   -webkit-backdrop-filter: blur(16px) !important;
   border-radius: 12px !important;
   padding: 16px !important;
@@ -109,7 +187,8 @@ body {
   margin-top: 0;
   margin-bottom: 8px;
   padding-bottom: 15px;
-  font-size: 1.5rem; /* increase from 1.05rem to 1.5rem */
+  font-size: 1.5rem;
+  /* increased */
   font-weight: 700;
 }
 
@@ -121,40 +200,54 @@ body {
 }
 
 /* ---------- Lists ---------- */
+/* Skills list styling */
 .stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
   list-style: none;
   padding: 0;
-  margin: 0;
-}
-.stack li {
-  background: var(--glass);
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.work { margin: 0; padding: 0; }
-.work div { margin-bottom: 12px; }
-.work dt { font-weight: 700; }
+.stack li {
+  border-radius: var(--radius);
+  padding: 6px 12px;
+  background: transparent;
+  color: var(--accent);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.stack li:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.stack li i {
+  margin-right: 6px;
+}
+
+.work {
+  margin: 0;
+  padding: 0;
+}
+
+.work div {
+  margin-bottom: 12px;
+}
+
+.work dt {
+  font-weight: 700;
+}
+
 .work dd {
   margin: 4px 0 0;
   color: var(--muted);
   font-size: 0.95rem;
 }
 
-.projects {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
+/* ---------- Projects ---------- */
 .projects {
   list-style: none;
   padding: 0;
@@ -166,36 +259,74 @@ body {
 
 .game-item {
   display: flex;
-  align-items: center;       /* vertical alignment */
-  gap: 12px;                 /* space between icon, text, and button */
-  background: rgba(21, 28, 44, 0.6);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-radius: 8px;
-  padding: 10px 14px;
+  align-items: flex-start;
+  gap: 16px;                     /* space between image and details */
+  background: rgba(21, 28, 44, 0.6); /* semi-transparent dark background */
+  backdrop-filter: blur(12px);       /* frosted glass effect */
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Optional hover effect */
+.game-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 .game-icon {
-  width: 40px;              /* small icon */
-  height: 40px;
-  object-fit: cover;
-  border-radius: 6px;       /* optional rounding */
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
   flex-shrink: 0;
 }
 
-.game-name {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #ffffff;
-  flex-grow: 1;             /* take all remaining space */
+.game-details {
+  flex: 1;
+  margin-left: 10px;
 }
 
-.game-item .btn {
-  white-space: nowrap;       /* button stays on one line */
+.game-details h3 {
+  margin: 0 0 5px;
+  font-size: 1.2rem;
 }
 
+.game-description {
+  margin: 0 0 10px;
+  color: var(--muted);
+}
 
-.projects, .posts { margin: 0; padding-left: 1rem; }
+.game-tasks {
+  margin: 5px 0 10px;
+  padding-left: 20px;
+}
+
+.game-tasks li {
+  list-style: disc;
+  margin-bottom: 4px;
+}
+
+.game-details .btn.ghost {
+  margin-right: 6px;
+  color: var(--accent, #6ee7b7);
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.game-details .btn.ghost i {
+  margin-right: 5px;  /* gap between icon and text */
+  font-size: 1rem;    /* optional: adjust icon size */
+  vertical-align: middle; /* keeps it aligned with text */
+}
+
+.game-details .btn.ghost:hover {
+  background: var(--accent, #6ee7b7);
+  color: var(--bg, #0f1724);
+  /* fallback dark background */
+}
+
 
 /* ---------- Footer ---------- */
 .footer {

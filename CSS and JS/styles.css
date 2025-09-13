@@ -247,6 +247,63 @@ body {
   font-size: 0.95rem;
 }
 
+/* Timeline container */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  /* space for vertical line and dots */
+  margin-top: 10px;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  /* line position */
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--accent);
+  /* green line */
+}
+
+/* Each timeline item */
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+/* Dot for each item */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -19px;
+  /* center on line */
+  top: 5px;
+  /* adjust vertical */
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  /* green dot */
+  border-radius: 50%;
+  border: 2px solid #fff;
+  /* optional: white border around dot */
+}
+
+/* Adjust dt and dd for spacing */
+.timeline-item dt {
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.timeline-item dd {
+  margin-left: 0;
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+
 /* ---------- Projects ---------- */
 .projects {
   list-style: none;
@@ -260,9 +317,12 @@ body {
 .game-item {
   display: flex;
   align-items: flex-start;
-  gap: 16px;                     /* space between image and details */
-  background: rgba(21, 28, 44, 0.6); /* semi-transparent dark background */
-  backdrop-filter: blur(12px);       /* frosted glass effect */
+  gap: 16px;
+  /* space between image and details */
+  background: rgba(21, 28, 44, 0.6);
+  /* semi-transparent dark background */
+  backdrop-filter: blur(12px);
+  /* frosted glass effect */
   -webkit-backdrop-filter: blur(12px);
   border-radius: 12px;
   padding: 16px;
@@ -316,9 +376,12 @@ body {
 }
 
 .game-details .btn.ghost i {
-  margin-right: 5px;  /* gap between icon and text */
-  font-size: 1rem;    /* optional: adjust icon size */
-  vertical-align: middle; /* keeps it aligned with text */
+  margin-right: 5px;
+  /* gap between icon and text */
+  font-size: 1rem;
+  /* optional: adjust icon size */
+  vertical-align: middle;
+  /* keeps it aligned with text */
 }
 
 .game-details .btn.ghost:hover {

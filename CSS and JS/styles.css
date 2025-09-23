@@ -379,7 +379,7 @@ body {
   position: absolute;
   left: -19px;
   /* center on line */
-  top: 5px;
+  top: 20px;
   /* adjust vertical */
   width: 10px;
   height: 10px;
@@ -394,6 +394,12 @@ body {
 .timeline-item dt {
   font-weight: 700;
   margin-bottom: 2px;
+  margin-bottom: 30px;
+}
+
+.timeline-item span {
+  font-weight: 700;
+  font-size: xx-large;
 }
 
 .timeline-item dd {
@@ -414,14 +420,15 @@ body {
 
 .game-item {
   display: flex;
-  align-items: flex-start;
-  gap: 20px;
+  align-items: center;
+  /* centers icon + text vertically */
+  gap: 16px;
   margin-bottom: 20px;
   background: rgba(24, 63, 153, 0.233);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 12px;
-  padding: 16px;
+  padding: 12px;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -429,30 +436,45 @@ body {
 
 /* Optional hover effect */
 .game-item:hover {
-  transform: translateY(-8px);
+  transform: translateY(-5px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 /* Image 40% - stays side by side */
 .game-item .game-icon {
-  flex: 0 0 40%;
-  max-width: 40%;
-  border-radius: 12px;
-  object-fit: cover;
-  /* keeps image inside its box */
+  width: 120px;
+  /* fixed size */
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 8px;
 }
 
+.game-name {
+  margin: 0 0 6px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Flex layout for image left, text right */
+.game-entry {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.game-details {
+  flex: 1;
+}
 
 /* Details 60% */
 .game-item .game-details {
-  flex: 0 0 60%;
-  max-width: 60%;
-  margin-left: 10px;
+  flex: 1;
 }
 
 .game-details h3 {
-  margin: 0 0 5px;
-  font-size: 1.2rem;
+  margin: 0 0 0.3rem;
+  font-size: 1.1rem;
 }
 
 .game-item .game-details {
@@ -463,12 +485,8 @@ body {
 /* ✅ Text wrapping fix */
 .game-description {
   margin: 0 0 10px;
-  padding-right: 20px;
-  margin-bottom: 20px;
   color: var(--muted);
-  word-wrap: break-word;
-  overflow-wrap: anywhere;
-  line-height: 1.5;
+  font-size: 0.95rem;
 }
 
 .game-tasks {
@@ -491,10 +509,17 @@ body {
 }
 
 .game-details .btn.ghost {
-  margin-right: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   color: var(--accent, #6ee7b7);
   background: transparent;
+  border: 1px solid var(--accent, #6ee7b7);
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
   transition: all 0.3s ease;
+
 }
 
 .game-details .btn.ghost i {
@@ -509,6 +534,7 @@ body {
 .game-details .btn.ghost:hover {
   background: var(--accent, #6ee7b7);
   color: var(--bg, #0f1724);
+
   /* fallback dark background */
 }
 
@@ -526,6 +552,18 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  .game-entry {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .game-icon {
+    width: 40%;
+    margin-bottom: 0.5rem;
+  }
+}
+
 
 /* ---------- Footer ---------- */
 .footer {
@@ -540,6 +578,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* stays behind everything */
-  pointer-events: none; /* ignore clicks */
+  z-index: -1;
+  /* stays behind everything */
+  pointer-events: none;
+  /* ignore clicks */
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frosty World – Game Details</title>
+    <title>Grim of Legacy – Game Details</title>
     <link rel="stylesheet" href="CSS and JS/styles.css" />
 
     <!-- Bootstrap 5 -->
@@ -14,26 +14,24 @@
 
     <!-- Extra overrides for project details -->
     <style>
-        /* Project Details Page Layout */
+        /* Slide up animation once */
         .slide-up-once {
             animation: slideUpOnce 1s ease forwards;
-            /* 1s duration, ease, stays at final position */
         }
 
         @keyframes slideUpOnce {
             0% {
                 transform: translateY(40px);
-                /* start slightly below */
                 opacity: 0;
             }
 
             100% {
                 transform: translateY(0);
-                /* final position */
                 opacity: 1;
             }
         }
 
+        /* Project Details Page Layout */
         .project-details-page {
             max-width: 1150px;
             margin: 2rem auto;
@@ -115,7 +113,7 @@
             color: var(--bg);
         }
 
-        /* 📱 Mobile view: stack image on top */
+        /* Mobile view */
         @media (max-width: 768px) {
             .project-header {
                 flex-direction: column;
@@ -125,7 +123,6 @@
 
             .project-header img {
                 width: 200px;
-                /* a bit bigger on mobile */
             }
 
             .project-title-block {
@@ -147,81 +144,82 @@
                 width: 100%;
                 height: 100%;
                 z-index: -1;
-                /* behind content */
                 pointer-events: none;
-                /* click-through */
             }
         }
     </style>
 </head>
 
 <body>
+    <!-- Particle background -->
     <canvas id="particle-canvas"></canvas>
 
     <main class="project-details-page card slide-up-once">
-        <!-- Header with image + title + meta -->
+        <!-- Grim of Legacy Project -->
         <div class="project-header">
-            <img src="https://play-lh.googleusercontent.com/vMD0YgsHTB98ssviKTbEzQvTMO0idOlJkObcYVQghXqUKW0Zm5FF6TGHceI_8ry9sQu_=w480-h960-rw"
-                alt="Christmas Game Icon" />
+            <img src="https://play-lh.googleusercontent.com/KKZ8Iif_TgZrVsqWMF1ABZECkrViTXkFCrQPmob2yqYAPv7GtcXYAoEEvYKekXq94A=w480-h960-rw"
+                alt="Grim of Legacy Icon" />
             <div class="project-title-block">
-                <h1>🎄 Christmas Game: Frosty World</h1>
+                <h1>🕹️ Escape Room: Grim of Legacy</h1>
                 <div class="project-meta">
-                    <p><strong>👩‍💻 Role:</strong> Game Designer, Level Designer, Narrator, & Puzzle Designer</p>
-                    <p><strong>🛠️ Tools Used:</strong> Unity</p>
+                    <p><strong>👩‍💻 Role:</strong> Game Designer & Level Designer</p>
+                    <p><strong>🛠️ Tools Used:</strong> Flash</p>
                 </div>
             </div>
         </div>
 
         <h2>📜 About the Game</h2>
         <p>
-            Frosty World is a 🎅 Christmas-themed escape adventure where magic takes a dark turn.
-            A mysterious spell transforms Santa’s once-friendly toys into dangerous foes.
-            Four cousins two 👧 girls and two 👦 boys spending their holidays with their grandfather
-            embark on a quest to reverse the spell and save Christmas.
+            Grim of Legacy is a dark, suspense-driven survival game inspired by high-stakes competitions. Four desperate
+            players are
+            lured to a secret island by a mysterious villain promising massive prize money. Each participant carries a
+            unique
+            backstory and motivation, but soon realizes the game’s true nature is far deadlier than expected.
         </p>
 
         <h2>🎮 Storyline & Gameplay</h2>
         <p>
-            Players journey through enchanting ❄️ fantasy realms, from snow-laden villages to hidden toy workshops.
-            Along the way, they meet Santa’s allies 🦌🧝, solving puzzles and uncovering clues to break the curse.
-            Each level combines festive visuals with interactive mechanics, creating a playful yet suspenseful Christmas
-            adventure.
+            Players navigate a series of deadly, puzzle-driven challenges while constantly monitored by the villain’s
+            surveillance
+            system. As tensions rise, they’re pressured to betray and eliminate each other — but instead form alliances
+            to
+            uncover the mastermind’s motives. The villain manipulates their families to increase the stakes, forcing the
+            group to
+            save loved ones while working together to survive. Eventually, they confront the villain, only to discover
+            the twisted
+            reason behind the game: his alien girlfriend craves chaos and entertainment.
         </p>
 
         <h2>🕹️ Game Mechanics</h2>
         <ul>
-            <li>🧩 <strong>Puzzle-based progression:</strong> Solve riddles, symbol-matching challenges, and
-                hidden-object
-                tasks.</li>
-            <li>🎒 <strong>Inventory & item combination:</strong> Collect magical artifacts ✨, combine them to dispel
-                spells
-                or activate mechanisms.</li>
-            <li>👀 <strong>Stealth & timing:</strong> Avoid cursed toys 🚂 patrolling zones; timing and movement choices
-                affect success.</li>
-            <li>💬 <strong>Dialogue & choices:</strong> Conversations with Santa’s allies reveal clues 🗝️ or
-                alternative
-                paths.</li>
-            <li>🎭 <strong>Mini-boss encounters:</strong> Overcome cursed toy guardians through logic-based challenges
-                instead
-                of combat.</li>
+            <li>🎯 <strong>Task-based survival challenges:</strong> Complete timed objectives, solve puzzles under
+                pressure, and outthink traps to advance.</li>
+            <li>🧩 <strong>Psychological strategy:</strong> Manage trust, alliances, and betrayal dynamics with other
+                players.</li>
+            <li>🕵️ <strong>Investigation mode:</strong> Uncover clues about the villain, hidden surveillance systems,
+                and escape routes.</li>
+            <li>💬 <strong>Branching dialogue:</strong> Choices affect relationships, mission success, and multiple
+                endings.</li>
+            <li>⚔️ <strong>Boss confrontation:</strong> Face the villain in a dramatic endgame encounter blending combat
+                and puzzle-solving.</li>
         </ul>
 
         <div class="project-cta">
             <a href="index.html#projects" class="btn ghost">⬅ Back to Projects</a>
-            <a href="https://play.google.com/store/apps/details?id=air.com.hfg.frostyworld&hl=en_IN" target="_blank"
+            <a href="https://play.google.com/store/apps/details?id=air.com.hfg.grimoflegacy&hl=en_IN" target="_blank"
                 class="btn ghost">
                 <i class="bi bi-google-play"></i> Play Store
             </a>
         </div>
     </main>
 
-    <!-- Particle background canvas -->
+    <!-- Particle animation script -->
     <script>
         const canvas = document.getElementById("particle-canvas");
         const ctx = canvas.getContext("2d");
 
         let particles = [];
-        let particleDensity = 0.00015; // adjust for density
+        let particleDensity = 0.00015;
 
         class Particle {
             constructor(width, height) {
@@ -236,7 +234,6 @@
                 this.x += this.speedX;
                 this.y += this.speedY;
 
-                // Wrap around edges
                 if (this.x < 0) this.x = width;
                 if (this.x > width) this.x = 0;
                 if (this.y < 0) this.y = height;
@@ -255,7 +252,7 @@
             canvas.height = window.innerHeight;
             particles = [];
 
-            let totalParticles = Math.floor(canvas.width * canvas.height * particleDensity);
+            const totalParticles = Math.floor(canvas.width * canvas.height * particleDensity);
             for (let i = 0; i < totalParticles; i++) {
                 particles.push(new Particle(canvas.width, canvas.height));
             }
@@ -270,14 +267,11 @@
             requestAnimationFrame(animate);
         }
 
-        // Init and animate
         initParticles();
         animate();
 
-        // Re-init on resize
         window.addEventListener("resize", initParticles);
     </script>
-
 </body>
 
 </html>

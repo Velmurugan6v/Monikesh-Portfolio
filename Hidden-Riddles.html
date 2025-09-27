@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frosty World – Game Details</title>
+    <title>Hidden Riddles – Game Details</title>
     <link rel="stylesheet" href="CSS and JS/styles.css" />
 
     <!-- Bootstrap 5 -->
@@ -14,26 +14,24 @@
 
     <!-- Extra overrides for project details -->
     <style>
-        /* Project Details Page Layout */
+        /* Slide up animation once */
         .slide-up-once {
             animation: slideUpOnce 1s ease forwards;
-            /* 1s duration, ease, stays at final position */
         }
 
         @keyframes slideUpOnce {
             0% {
                 transform: translateY(40px);
-                /* start slightly below */
                 opacity: 0;
             }
 
             100% {
                 transform: translateY(0);
-                /* final position */
                 opacity: 1;
             }
         }
 
+        /* Project Details Page Layout */
         .project-details-page {
             max-width: 1150px;
             margin: 2rem auto;
@@ -115,7 +113,7 @@
             color: var(--bg);
         }
 
-        /* 📱 Mobile view: stack image on top */
+        /* Mobile view */
         @media (max-width: 768px) {
             .project-header {
                 flex-direction: column;
@@ -125,7 +123,6 @@
 
             .project-header img {
                 width: 200px;
-                /* a bit bigger on mobile */
             }
 
             .project-title-block {
@@ -147,26 +144,25 @@
                 width: 100%;
                 height: 100%;
                 z-index: -1;
-                /* behind content */
                 pointer-events: none;
-                /* click-through */
             }
         }
     </style>
 </head>
 
 <body>
+    <!-- Particle background -->
     <canvas id="particle-canvas"></canvas>
 
     <main class="project-details-page card slide-up-once">
-        <!-- Header with image + title + meta -->
+        <!-- Hidden Riddles Project -->
         <div class="project-header">
-            <img src="https://play-lh.googleusercontent.com/vMD0YgsHTB98ssviKTbEzQvTMO0idOlJkObcYVQghXqUKW0Zm5FF6TGHceI_8ry9sQu_=w480-h960-rw"
-                alt="Christmas Game Icon" />
+            <img src="https://play-lh.googleusercontent.com/RXrh0qOpx5tf96BncfqfI3UHlNC6GKhJC9RGYQKMZ5Kmq3tLmPd_OTFEqZuq-YFM0Dg=w480-h960-rw"
+                alt="Hidden Riddles Icon" />
             <div class="project-title-block">
-                <h1>🎄 Christmas Game: Frosty World</h1>
+                <h1>🕹️ Escape Room: Hidden Riddles</h1>
                 <div class="project-meta">
-                    <p><strong>👩‍💻 Role:</strong> Game Designer, Level Designer, Narrator, & Puzzle Designer</p>
+                    <p><strong>👩‍💻 Role:</strong> Game Designer, Level Designer, Narrator & Puzzle Designer</p>
                     <p><strong>🛠️ Tools Used:</strong> Unity</p>
                 </div>
             </div>
@@ -174,54 +170,43 @@
 
         <h2>📜 About the Game</h2>
         <p>
-            Frosty World is a 🎅 Christmas-themed escape adventure where magic takes a dark turn.
-            A mysterious spell transforms Santa’s once-friendly toys into dangerous foes.
-            Four cousins two 👧 girls and two 👦 boys spending their holidays with their grandfather
-            embark on a quest to reverse the spell and save Christmas.
+            Hidden Riddles is an 🏺 ancient-themed fantasy adventure packed with mystery and twists. Twin princesses,
+            separated and raised in very different worlds, reunite to uncover the truth behind their cursed kingdom and
+            reclaim their destiny. Players explore magical lands, uncover secrets, and restore balance to their world.
         </p>
 
         <h2>🎮 Storyline & Gameplay</h2>
         <p>
-            Players journey through enchanting ❄️ fantasy realms, from snow-laden villages to hidden toy workshops.
-            Along the way, they meet Santa’s allies 🦌🧝, solving puzzles and uncovering clues to break the curse.
-            Each level combines festive visuals with interactive mechanics, creating a playful yet suspenseful Christmas
-            adventure.
+            Players travel through vibrant ✨ fantasy environments like Frog Village 🐸, Mushroom Village 🍄, Carnival 🎡
+            and mystical tribal forests 🌳. They solve ancient puzzles, recover magical stones, and face their cousin’s
+            dark power while discovering their own hidden heritage.
         </p>
 
         <h2>🕹️ Game Mechanics</h2>
         <ul>
-            <li>🧩 <strong>Puzzle-based progression:</strong> Solve riddles, symbol-matching challenges, and
-                hidden-object
-                tasks.</li>
-            <li>🎒 <strong>Inventory & item combination:</strong> Collect magical artifacts ✨, combine them to dispel
-                spells
-                or activate mechanisms.</li>
-            <li>👀 <strong>Stealth & timing:</strong> Avoid cursed toys 🚂 patrolling zones; timing and movement choices
-                affect success.</li>
-            <li>💬 <strong>Dialogue & choices:</strong> Conversations with Santa’s allies reveal clues 🗝️ or
-                alternative
-                paths.</li>
-            <li>🎭 <strong>Mini-boss encounters:</strong> Overcome cursed toy guardians through logic-based challenges
-                instead
-                of combat.</li>
+            <li>🧩 <strong>Interactive puzzles & riddles:</strong> Solve ancient symbols, rotating stone mechanisms, and memory-based tasks to progress.</li>
+            <li>🐉 <strong>Mini-games:</strong> Engage in thrilling dragon fights 🐲, clever frog challenges 🐸, and adventurous boat rides 🚤 that break up the main storyline.</li>
+            <li>🎒 <strong>Exploration & inventory:</strong> Collect enchanted items ✨ and use them to unlock portals or reveal hidden paths.</li>
+            <li>💬 <strong>Dialogue-driven choices:</strong> Interactions with tribal leaders, magical beings, and allies affect story direction 🗝️.</li>
+            <li>🌍 <strong>Fantasy environments:</strong> Each level offers distinct visuals and mechanics tied to its setting, immersing players in a living, ancient world.</li>
         </ul>
 
         <div class="project-cta">
             <a href="index.html#projects" class="btn ghost">⬅ Back to Projects</a>
-            <a href="https://play.google.com/store/apps/details?id=air.com.hfg.frostyworld&hl=en_IN" target="_blank"
+            <a href="https://play.google.com/store/apps/details?id=air.com.hfg.hiddenriddles&hl=en_IN" target="_blank"
                 class="btn ghost">
                 <i class="bi bi-google-play"></i> Play Store
             </a>
         </div>
     </main>
 
-    <!-- Particle background canvas -->
+    <!-- Particle animation script -->
     <script>
         const canvas = document.getElementById("particle-canvas");
         const ctx = canvas.getContext("2d");
 
         let particles = [];
-        let particleDensity = 0.00015; // adjust for density
+        let particleDensity = 0.00015;
 
         class Particle {
             constructor(width, height) {
@@ -236,7 +221,6 @@
                 this.x += this.speedX;
                 this.y += this.speedY;
 
-                // Wrap around edges
                 if (this.x < 0) this.x = width;
                 if (this.x > width) this.x = 0;
                 if (this.y < 0) this.y = height;
@@ -255,7 +239,7 @@
             canvas.height = window.innerHeight;
             particles = [];
 
-            let totalParticles = Math.floor(canvas.width * canvas.height * particleDensity);
+            const totalParticles = Math.floor(canvas.width * canvas.height * particleDensity);
             for (let i = 0; i < totalParticles; i++) {
                 particles.push(new Particle(canvas.width, canvas.height));
             }
@@ -270,14 +254,11 @@
             requestAnimationFrame(animate);
         }
 
-        // Init and animate
         initParticles();
         animate();
 
-        // Re-init on resize
         window.addEventListener("resize", initParticles);
     </script>
-
 </body>
 
 </html>

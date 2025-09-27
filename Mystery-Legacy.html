@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frosty World – Game Details</title>
+    <title>World vs Escapers – Game Details</title>
     <link rel="stylesheet" href="CSS and JS/styles.css" />
 
     <!-- Bootstrap 5 -->
@@ -14,22 +14,18 @@
 
     <!-- Extra overrides for project details -->
     <style>
-        /* Project Details Page Layout */
         .slide-up-once {
             animation: slideUpOnce 1s ease forwards;
-            /* 1s duration, ease, stays at final position */
         }
 
         @keyframes slideUpOnce {
             0% {
                 transform: translateY(40px);
-                /* start slightly below */
                 opacity: 0;
             }
 
             100% {
                 transform: translateY(0);
-                /* final position */
                 opacity: 1;
             }
         }
@@ -42,7 +38,6 @@
             line-height: 1.75;
         }
 
-        /* Header section */
         .project-header {
             display: flex;
             align-items: flex-start;
@@ -81,7 +76,6 @@
             font-size: 1.25rem;
         }
 
-        /* Sections */
         .project-details-page h2 {
             margin-top: 2.2rem;
             font-size: 1.8rem;
@@ -93,7 +87,6 @@
             font-size: 1.15rem;
         }
 
-        /* CTA buttons */
         .project-cta {
             margin-top: 3rem;
             display: flex;
@@ -115,7 +108,6 @@
             color: var(--bg);
         }
 
-        /* 📱 Mobile view: stack image on top */
         @media (max-width: 768px) {
             .project-header {
                 flex-direction: column;
@@ -125,7 +117,6 @@
 
             .project-header img {
                 width: 200px;
-                /* a bit bigger on mobile */
             }
 
             .project-title-block {
@@ -147,81 +138,91 @@
                 width: 100%;
                 height: 100%;
                 z-index: -1;
-                /* behind content */
                 pointer-events: none;
-                /* click-through */
             }
         }
     </style>
 </head>
 
 <body>
+    <!-- Particle background -->
     <canvas id="particle-canvas"></canvas>
 
     <main class="project-details-page card slide-up-once">
-        <!-- Header with image + title + meta -->
+        <!-- World vs Escapers Project -->
         <div class="project-header">
-            <img src="https://play-lh.googleusercontent.com/vMD0YgsHTB98ssviKTbEzQvTMO0idOlJkObcYVQghXqUKW0Zm5FF6TGHceI_8ry9sQu_=w480-h960-rw"
-                alt="Christmas Game Icon" />
+            <img src="https://play-lh.googleusercontent.com/qMz6ZSnTCymdqCk2UCScgEaa7v3Wnw7Yon2KLZifbghJNLqjw20bhlhLgcShI-9N8jI=w480-h960-rw"
+                alt="World vs Escapers Icon" />
             <div class="project-title-block">
-                <h1>🎄 Christmas Game: Frosty World</h1>
+                <h1> <span>🌍</span> Escape Games: World vs Escapers – Multi Chapter Adventure</h1>
                 <div class="project-meta">
-                    <p><strong>👩‍💻 Role:</strong> Game Designer, Level Designer, Narrator, & Puzzle Designer</p>
-                    <p><strong>🛠️ Tools Used:</strong> Unity</p>
+                    <p><strong>👩‍💻 Role:</strong> Game Designer, Level Designer, Narrator, Game Lead</p>
+                    <p><strong>🛠️ Tools Used:</strong> Figma, Unity</p>
                 </div>
             </div>
         </div>
 
-        <h2>📜 About the Game</h2>
+        <h2>📜 About the Project</h2>
         <p>
-            Frosty World is a 🎅 Christmas-themed escape adventure where magic takes a dark turn.
-            A mysterious spell transforms Santa’s once-friendly toys into dangerous foes.
-            Four cousins two 👧 girls and two 👦 boys spending their holidays with their grandfather
-            embark on a quest to reverse the spell and save Christmas.
+            A multi-chapter escape game series featuring diverse stories across various genres—horror, detective,
+            fantasy,
+            thriller, adventure, mystery, comedy, sci-fi, and historical. Each chapter offers a unique narrative,
+            environment,
+            and gameplay experience, keeping players engaged and challenged.
         </p>
 
-        <h2>🎮 Storyline & Gameplay</h2>
-        <p>
-            Players journey through enchanting ❄️ fantasy realms, from snow-laden villages to hidden toy workshops.
-            Along the way, they meet Santa’s allies 🦌🧝, solving puzzles and uncovering clues to break the curse.
-            Each level combines festive visuals with interactive mechanics, creating a playful yet suspenseful Christmas
-            adventure.
-        </p>
+        <h2>🎮 Chapters Worked On</h2>
+        <ul>
+            <li>Enigmatic Tales</li>
+            <li>Mountain Mirage</li>
+            <li>The Serializer</li>
+            <li>The Last Clue</li>
+            <li>Final Cut</li>
+            <li>Spyline Rally</li>
+            <li>No Way Out</li>
+            <li>Alcyme’s Mystery</li>
+            <li>Masterpiece: Missing</li>
+            <li>Legacy of Lost Crystal</li>
+            <li>Chronicles of Multi-Verse</li>
+            <li>Detective Case</li>
+            <li>Prisoner Outbreak</li>
+        </ul>
 
         <h2>🕹️ Game Mechanics</h2>
         <ul>
-            <li>🧩 <strong>Puzzle-based progression:</strong> Solve riddles, symbol-matching challenges, and
-                hidden-object
-                tasks.</li>
-            <li>🎒 <strong>Inventory & item combination:</strong> Collect magical artifacts ✨, combine them to dispel
-                spells
-                or activate mechanisms.</li>
-            <li>👀 <strong>Stealth & timing:</strong> Avoid cursed toys 🚂 patrolling zones; timing and movement choices
-                affect success.</li>
-            <li>💬 <strong>Dialogue & choices:</strong> Conversations with Santa’s allies reveal clues 🗝️ or
-                alternative
-                paths.</li>
-            <li>🎭 <strong>Mini-boss encounters:</strong> Overcome cursed toy guardians through logic-based challenges
-                instead
-                of combat.</li>
+            <li>👥 <strong>Multi-Character Point of View:</strong> Experience the story through different characters,
+                each
+                offering unique perspectives and gameplay interactions.</li>
+            <li>🌍 <strong>Innovative Environments:</strong> Explore creatively designed settings that complement the
+                narrative and immerse players in each chapter’s theme.</li>
+            <li>🧩 <strong>Mini-Games & Unique Puzzles:</strong> Solve engaging mini-games and one-of-a-kind puzzles
+                that
+                challenge logic, memory, and observation skills.</li>
+            <li>🎮 <strong>Interactive Gameplay:</strong> Integrate player actions seamlessly with story progression,
+                ensuring gameplay and narrative enhance each other.</li>
+            <li>🔍 <strong>Hidden Object Innovation:</strong> Discover cleverly hidden items and interact with
+                environments in
+                meaningful ways to unlock clues or progress.</li>
+            <li>💬 <strong>Dynamic Conversations:</strong> Engage in interactive dialogues that influence character
+                relationships, story outcomes, and puzzle solutions.</li>
         </ul>
 
         <div class="project-cta">
             <a href="index.html#projects" class="btn ghost">⬅ Back to Projects</a>
-            <a href="https://play.google.com/store/apps/details?id=air.com.hfg.frostyworld&hl=en_IN" target="_blank"
+            <a href="https://play.google.com/store/apps/details?id=com.hfg.darkventures&hl=en_IN" target="_blank"
                 class="btn ghost">
                 <i class="bi bi-google-play"></i> Play Store
             </a>
         </div>
     </main>
 
-    <!-- Particle background canvas -->
+    <!-- Particle animation script -->
     <script>
         const canvas = document.getElementById("particle-canvas");
         const ctx = canvas.getContext("2d");
 
         let particles = [];
-        let particleDensity = 0.00015; // adjust for density
+        let particleDensity = 0.00015;
 
         class Particle {
             constructor(width, height) {
@@ -235,8 +236,6 @@
             update(width, height) {
                 this.x += this.speedX;
                 this.y += this.speedY;
-
-                // Wrap around edges
                 if (this.x < 0) this.x = width;
                 if (this.x > width) this.x = 0;
                 if (this.y < 0) this.y = height;
@@ -254,8 +253,7 @@
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
             particles = [];
-
-            let totalParticles = Math.floor(canvas.width * canvas.height * particleDensity);
+            const totalParticles = Math.floor(canvas.width * canvas.height * particleDensity);
             for (let i = 0; i < totalParticles; i++) {
                 particles.push(new Particle(canvas.width, canvas.height));
             }
@@ -270,14 +268,11 @@
             requestAnimationFrame(animate);
         }
 
-        // Init and animate
         initParticles();
         animate();
 
-        // Re-init on resize
         window.addEventListener("resize", initParticles);
     </script>
-
 </body>
 
 </html>

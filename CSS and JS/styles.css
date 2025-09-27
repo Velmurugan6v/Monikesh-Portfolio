@@ -73,6 +73,7 @@ body * {
   border: 1px solid var(--accent);
   color: var(--accent);
   transition: all 0.3s ease;
+  margin-right: 10px;
 }
 
 .hero .btn.ghost:hover {
@@ -482,6 +483,11 @@ body {
   /* Details take 60% */
 }
 
+/* Details 60% */
+.game-item .game-details .btn.ghost{
+  margin-left: 10px;
+}
+
 /* ✅ Text wrapping fix */
 .game-description {
   margin: 0 0 10px;
@@ -538,11 +544,17 @@ body {
   /* fallback dark background */
 }
 
+.game-item .a {
+  margin-left: 50px;
+}
+
 /* 📱 Responsive: On small screens, stack */
 @media (max-width: 768px) {
   .game-item {
     flex-direction: column;
   }
+
+
 
   .game-item .game-icon,
   .game-item .game-details {
